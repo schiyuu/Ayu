@@ -38,27 +38,27 @@
       text-decoration: none;
     }
     .social-links a:hover {
-      color: #fff;
+      color: #4e4e4e;
     }
     .profile-image {
         width: 100px;
         height: 100px;
         border-radius: 50%;
         background-image: url('./image.png');
-        background-size: cover;
-        background-position: center; 
+        background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+        background-position: center; /* Centraliza a imagem no contêiner */
         margin-bottom: 20px;
     }
 
     h1 {
-      font-size: 24px; 
-      font-weight: 400; 
+      font-size: 24px; /* Tamanho do título */
+      font-weight: 400; /* Removido o negrito do título */
       color: #fff;
       margin-bottom: 10px;
     }
     h1 span {
-      color: #4A90E2;
-      font-weight: 400;
+      color: #511fdd;
+      font-weight: 400; /* Removido o negrito dos nomes também */
     }
     p {
       font-size: 15px;
@@ -81,46 +81,52 @@
       margin-top: 30px;
       padding: 10px 20px;
       font-size: 16px;
-      color: #000; 
-      background-color: #fff;
-      border: none; 
-      border-radius: 25px;
+      color: #000; /* Cor do texto */
+      background-color: #fff; /* Cor de fundo branca */
+      border: none; /* Removido a borda */
+      border-radius: 25px; /* Aumentar o arredondamento */
       cursor: pointer;
       text-decoration: none;
       font-weight: 400;
-      transition: background-color 0.3s, color 0.3s, transform 0.3s;
+      transition: background-color 0.3s, color 0.3s, transform 0.3s; /* Transição suave */
     }
     .contact-button:hover {
-      background-color: #4A90E2;
-      color: #fff;
-      transform: scale(1.05);
+      background-color: #511fdd; /* Cor ao passar o mouse */
+      color: #fff; /* Cor do texto ao passar o mouse */
+      transform: scale(1.05); /* Leve aumento ao passar o mouse */
     }
     .title-subtext {
       font-size: 14px;
       color: #ccc;
-      margin-bottom: 5px;
+      margin-bottom: 5px; /* Espaçamento entre o subtexto e o título */
     }
+    
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Links sociais no canto superior direito -->
     <div class="social-links">
-      <a href="https://github.com/joaoayu" target="_blank">GitHub</a>
-      <a href="https://discord.gg/vsQAy4EDa2" target="_blank">Discord</a>
-      <a href="" target="_blank">Coming soon...</a>
-    </div>
+        <a href="https://github.com/joaoayu" target="_blank">GitHub
+        </a>
+        <a href="https://discord.gg/vsQAy4EDa2" target="_blank">Discord
+        </a>
+        <a href="" target="_blank">Coming soon...</a>
+      </div>
+      
     
     <div class="profile-image"></div>
     
+    <!-- Novo texto adicionado aqui -->
     <div class="title-subtext">Founder at Nebly Cloud</div>
     
     <h1>Hi, I'm <span>Ayu</span>, but my friends call me <span>Grim</span></h1>
-    <p>I'm a <span class="highlight">Fullstack Developer</span>, based in Brazil.</p>
+    <p>I'm a <span class="highlight">Fullstack Developer</span>, and I'm 20 years old.</p><br>
     <p>I'm passionate about developing new projects and creating bots for Discord.</p>
     <p>Currently, I'm working on a social project for developers who want to host their applications for free and learn for free. If you want to help me, feel free to reach out to me on Discord!</p>
     
     <div class="skills">
-      My skills: JavaScript • Python • React • Next.js • UI/UX
+      JavaScript • Python • React • Next.js • UI/UX
     </div>
     
     <a href="mailto:joao@neblycloud.com" class="contact-button">Contact me</a>
