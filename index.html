@@ -98,9 +98,8 @@
     }
     .servers-grid {
       display: flex;
-      justify-content: space-between;
       gap: 20px;
-      flex-wrap: nowrap;
+      animation: scrollServers 20s linear infinite; /* Animação de rolagem */
     }
     .server-item {
       background-color: rgba(255, 255, 255, 0.1);
@@ -108,8 +107,8 @@
       padding: 20px;
       text-align: center;
       transition: transform 0.3s, box-shadow 0.3s;
-      flex: 1;
-      min-width: 150px;
+      flex: 0 0 auto; /* Impede que os itens encolham */
+      min-width: 200px; /* Largura mínima para cada item */
     }
     .server-item:hover {
       background-color: rgba(138, 43, 226, 0.2); /* Roxo */
@@ -152,6 +151,115 @@
     .footer a:hover {
       color: #fff;
     }
+
+    /* Animação de rolagem */
+    @keyframes scrollServers {
+      0% {
+        transform: translateX(0); /* Começa à esquerda */
+      }
+      100% {
+        transform: translateX(-50%); /* Move para a esquerda */
+      }
+    }
+
+    /* Media Queries para Responsividade */
+    @media (max-width: 1200px) {
+      .container {
+        padding: 30px 40px;
+      }
+      h1 {
+        font-size: 32px;
+      }
+      h2 {
+        font-size: 22px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .server-item {
+        padding: 15px; /* Reduz o padding */
+      }
+      .server-icon {
+        width: 70px; /* Reduz o tamanho do ícone */
+        height: 70px;
+      }
+      .server-info h3 {
+        font-size: 16px; /* Reduz o tamanho da fonte */
+      }
+      .server-info p {
+        font-size: 12px; /* Reduz o tamanho da fonte */
+      }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 30px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 14px;
+      }
+      .profile-image {
+        width: 120px;
+        height: 120px;
+      }
+      .social-links a {
+        font-size: 20px;
+      }
+      .server-item {
+        padding: 10px; /* Reduz ainda mais o padding */
+      }
+      .server-icon {
+        width: 60px; /* Reduz o tamanho do ícone */
+        height: 60px;
+      }
+      .server-info h3 {
+        font-size: 14px; /* Reduz o tamanho da fonte */
+      }
+      .server-info p {
+        font-size: 10px; /* Reduz o tamanho da fonte */
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 15px 20px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        font-size: 12px;
+      }
+      .profile-image {
+        width: 100px;
+        height: 100px;
+      }
+      .social-links a {
+        font-size: 18px;
+      }
+      .server-item {
+        padding: 8px; /* Padding mínimo */
+      }
+      .server-icon {
+        width: 50px; /* Tamanho mínimo do ícone */
+        height: 50px;
+      }
+      .server-info h3 {
+        font-size: 12px; /* Tamanho mínimo da fonte */
+      }
+      .server-info p {
+        font-size: 9px; /* Tamanho mínimo da fonte */
+      }
+    }
   </style>
 </head>
 <body>
@@ -170,6 +278,55 @@
     <div class="servers-section">
       <h2>Places I've Worked As a Moderator</h2>
       <div class="servers-grid">
+        <!-- Conteúdo original -->
+        <div class="server-item">
+          <div class="server-icon"><img src="./a_41685591d519183fe1185d5cbcac6070.webp" alt="Refugio da Jinx"></div>
+          <div class="server-info">
+            <h3>Refugio da Jinx</h3>
+            <p>Founder</p>
+            <p>Members: +500</p>
+          </div>
+        </div>
+        <div class="server-item">
+          <div class="server-icon"><img src="./7581ea22ca07ee25b28ac44370cb0a9e.webp" alt="BePlus Academy"></div>
+          <div class="server-info">
+            <h3>BePlus Academy</h3>
+            <p>Community Manager</p>
+          </div>
+        </div>
+        <div class="server-item">
+          <div class="server-icon"><img src="./a_a6254e21297f8565cb9803498d4e0616.webp" alt="Craftlandia"></div>
+          <div class="server-info">
+            <h3>Craftlandia</h3>
+            <p>Former Administrator</p>
+            <p>Members: +7,000</p>
+          </div>
+        </div>
+        <div class="server-item">
+          <div class="server-icon"><img src="./1b2a0265981b7970284e97f78044f9dc.webp" alt="DC Community"></div>
+          <div class="server-info">
+            <h3>DC Community</h3>
+            <p>Former Moderator</p>
+            <p>Members: +1,500</p>
+          </div>
+        </div>
+        <div class="server-item">
+          <div class="server-icon"><img src="./1b2a0265981b7970284e97f78044f9dc.webp" alt="DevCreates"></div>
+          <div class="server-info">
+            <h3>DevCreates</h3>
+            <p>Former Moderator</p>
+            <p>Members (Guild): 200</p>
+          </div>
+        </div>
+        <div class="server-item">
+          <div class="server-icon"><img src="./15da7fec6bc925f02957fd6fbdf317bf.webp" alt="BilliEilish"></div>
+          <div class="server-info">
+            <h3>Billie Eilish</h3>
+            <p>Former Moderator</p>
+            <p>Members: 7,000</p>
+          </div>
+        </div>
+        <!-- Conteúdo duplicado -->
         <div class="server-item">
           <div class="server-icon"><img src="./a_41685591d519183fe1185d5cbcac6070.webp" alt="Refugio da Jinx"></div>
           <div class="server-info">
